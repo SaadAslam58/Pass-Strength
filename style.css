@@ -10,8 +10,14 @@
     width: 100%;
     background-color: #201f21;
     display: flex;
+    flex-direction: column;
     justify-content:center;
     align-items: center;
+}
+
+.container h1 {
+    margin-bottom: 2rem;
+    color: #fff;
 }
 
 .input-box {
