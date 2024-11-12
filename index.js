@@ -1,6 +1,7 @@
 let pass = document.getElementById("password");
 let msg = document.getElementById("message");
 let str = document.getElementById("strength");
+let btn = document.getElementById("button")
 
 pass.addEventListener('input', () => {
 if (pass.value.length > 0) {
@@ -21,5 +22,18 @@ if (pass.value.length > 0) {
     str.innerHTML = "Strong";
     msg.style.color = "#26d730";
     pass.style.borderColor = "#26d730";
+ } else {
+    str.innerHTML = " ";
+    msg.style.color = "#26d730";
+    pass.style.borderColor = "#26d730";
  }
 }); 
+
+btn.addEventListener('click', () => {
+    alert("Password: " + pass.value);
+    pass.value = "";
+    str.innerHTML = " ";
+    msg.style.color = "#fff";
+    pass.style.borderColor = "#fff";
+    msg.style.display = "none";
+ });
